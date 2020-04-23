@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/project-tiles/static/css/main.5f361e03.chunk.css",
+    "main.js": "/project-tiles/static/js/main.dc6dad2a.chunk.js",
+    "main.js.map": "/project-tiles/static/js/main.dc6dad2a.chunk.js.map",
+    "runtime-main.js": "/project-tiles/static/js/runtime-main.4a27f51b.js",
+    "runtime-main.js.map": "/project-tiles/static/js/runtime-main.4a27f51b.js.map",
+    "static/js/2.97a57e2c.chunk.js": "/project-tiles/static/js/2.97a57e2c.chunk.js",
+    "static/js/2.97a57e2c.chunk.js.map": "/project-tiles/static/js/2.97a57e2c.chunk.js.map",
+    "index.html": "/project-tiles/index.html",
+    "precache-manifest.edf0a779ea173dbc6b0d5b9f60a0b17b.js": "/project-tiles/precache-manifest.edf0a779ea173dbc6b0d5b9f60a0b17b.js",
+    "service-worker.js": "/project-tiles/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/project-tiles/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.97a57e2c.chunk.js.LICENSE.txt": "/project-tiles/static/js/2.97a57e2c.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/project-tiles/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a27f51b.js",
+    "static/js/2.97a57e2c.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.dc6dad2a.chunk.js"
+  ]
+}
