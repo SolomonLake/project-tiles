@@ -1,8 +1,19 @@
 import React from "react";
 import tileBackImage from "../../images/prehistoricageicons/black/PrehistoricIcon_44_b.png";
 import { TileProps } from "./Tile";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles(theme => ({
+  tileImage: {
+    display: "flex",
+    maxWidth: "100%",
+    maxHeight: "100%",
+  },
+}));
 
 export const TileUI: React.FC<TileProps> = props => {
+  const classes = useStyles();
+
   const tile = props.tile;
   const facingUp = tileFacingUp(props);
   const image = facingUp ? tile.image : tileBackImage;
@@ -15,6 +26,7 @@ export const TileUI: React.FC<TileProps> = props => {
           props.flipTile(tile.id);
         }
       }}
+      className={classes.tileImage}
     />
   );
 };
