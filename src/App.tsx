@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
-import gem0 from "./images/gemsicons/addons/gems_add_136.png";
+import gemIcon from "./images/gemsicons/addons/gems_add_136.png";
+import pathIcon from "./images/strategygameicons/SGI_86.png";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={gem0} className="App-logo" alt="logo" />
+        <img src={gemIcon} />
+        <img src={pathIcon} />
         <p>
           Edit! <code>src/App.tsx</code> and save to reload.
         </p>
