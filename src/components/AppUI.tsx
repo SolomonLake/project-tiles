@@ -12,17 +12,22 @@ const useStyles = makeStyles(theme =>
     },
     gridY: {
       height: "100%",
-      alignItems: "center",
-      flexWrap: "nowrap",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
     },
     gridX: {
       maxHeight: "100%",
       overflow: "auto",
       flexWrap: "nowrap",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
     },
     gridItem: {
       display: "flex",
       height: "100%",
+      justifyContent: "center",
     },
   }),
 );
@@ -32,36 +37,21 @@ export const AppUI: React.FC<AppProps> = props => {
 
   return (
     <Container maxWidth="lg" className={classes.rootContainer}>
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        spacing={2}
-        className={classes.gridY}
-      >
+      <div className={classes.gridY}>
         {props.game.tileY.map((row, rowIndex) => {
           return (
-            <Grid
-              item
-              container
-              direction="row"
-              key={rowIndex}
-              justify="center"
-              // spacing={2}
-              className={classes.gridX}
-              // xs
-            >
+            <div className={classes.gridX}>
               {row.map(tileId => {
                 return (
-                  <Grid item key={tileId} className={classes.gridItem}>
-                    <Tile tile={props.game.tiles[tileId]} />
-                  </Grid>
+                  // <div className={classes.gridItem}>
+                  <Tile tile={props.game.tiles[tileId]} />
+                  // </div>
                 );
               })}
-            </Grid>
+            </div>
           );
         })}
-      </Grid>
+      </div>
     </Container>
   );
 };
