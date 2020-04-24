@@ -1,6 +1,6 @@
 import { numberUtils } from "./../../../scripts/utils/numberUtils";
 import { TileYArray, TileType } from "./gameTypes.d";
-import gemIcon from "../../../images/gemsicons/addons/gems_add_136.png";
+import gemIcon from "../../../images/gemsicons/addons/gems_add_152_b.PNG";
 import pathIcon from "../../../images/strategygameicons/SGI_86.png";
 
 function getLevelConfig() {

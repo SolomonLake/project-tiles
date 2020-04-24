@@ -13,8 +13,6 @@ const useStyles = makeStyles(theme => ({
     maxHeight: "100%",
     overflow: "auto",
     borderRadius: "20px",
-    border: "3px solid",
-    borderColor: props.facingUp ? "gold" : "black",
     outline: "none",
   }),
 }));
