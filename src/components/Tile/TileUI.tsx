@@ -9,8 +9,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "100%",
     maxHeight: "100%",
     overflow: "auto",
-    // width: "100%",
-    // objectFit: "contain",
+    padding: "5px",
   },
 }));
 

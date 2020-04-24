@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme =>
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
+      padding: "15px 0 15px 0",
     },
     gridX: {
       maxHeight: "100%",
@@ -22,11 +23,6 @@ const useStyles = makeStyles(theme =>
       flexWrap: "nowrap",
       display: "flex",
       flexDirection: "row",
-      justifyContent: "center",
-    },
-    gridItem: {
-      display: "flex",
-      height: "100%",
       justifyContent: "center",
     },
   }),
@@ -42,11 +38,7 @@ export const AppUI: React.FC<AppProps> = props => {
           return (
             <div className={classes.gridX}>
               {row.map(tileId => {
-                return (
-                  // <div className={classes.gridItem}>
-                  <Tile tile={props.game.tiles[tileId]} />
-                  // </div>
-                );
+                return <Tile tile={props.game.tiles[tileId]} />;
               })}
             </div>
           );
