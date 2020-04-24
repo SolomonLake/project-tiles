@@ -9,6 +9,7 @@ const useStyles = makeStyles(theme =>
   createStyles({
     rootContainer: {
       height: "100vh",
+      paddingBottom: "50px",
     },
     gridY: {
       height: "100%",
@@ -25,6 +26,15 @@ const useStyles = makeStyles(theme =>
       flexDirection: "row",
       justifyContent: "center",
     },
+    gridItem: {
+      // display: "flex",
+      width: "100%",
+      // maxHeight: "100%",
+      // overflow: "auto",
+      display: "flex",
+      padding: "5px",
+      justifyContent: "center",
+    },
   }),
 );
 
@@ -38,7 +48,11 @@ export const AppUI: React.FC<AppProps> = props => {
           return (
             <div className={classes.gridX}>
               {row.map(tileId => {
-                return <Tile tile={props.game.tiles[tileId]} />;
+                return (
+                  <div className={classes.gridItem}>
+                    <Tile tile={props.game.tiles[tileId]} />
+                  </div>
+                );
               })}
             </div>
           );

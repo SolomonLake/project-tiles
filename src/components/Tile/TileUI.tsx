@@ -3,24 +3,31 @@ import tileBackImage from "../../images/prehistoricageicons/black/PrehistoricIco
 import { TileProps } from "./Tile";
 import { makeStyles } from "@material-ui/core";
 
+type StyleProps = {
+  facingUp: boolean;
+};
 const useStyles = makeStyles(theme => ({
-  tileImage: {
+  tileImage: (props: StyleProps) => ({
     display: "flex",
     maxWidth: "100%",
     maxHeight: "100%",
     overflow: "auto",
-    padding: "5px",
-  },
+    borderRadius: "20px",
+    border: "3px solid",
+    borderColor: props.facingUp ? "gold" : "black",
+    outline: "none",
+  }),
 }));
 
 export const TileUI: React.FC<TileProps> = props => {
-  const classes = useStyles();
-
   const tile = props.tile;
   const facingUp = tileFacingUp(props);
   const image = facingUp ? tile.image : tileBackImage;
+
+  const classes = useStyles({ facingUp: tile.facingUp });
   return (
-    <img
+    <input
+      type="image"
       src={image}
       alt="tile"
       onClick={() => {
