@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme =>
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      padding: "15px 0 15px 0",
+      padding: "10px 0 15px 0",
     },
     gridX: {
       maxHeight: "100%",

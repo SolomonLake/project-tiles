@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => ({
     overflow: "auto",
     borderRadius: "20px",
     outline: "none",
+    WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
   }),
 }));
 
