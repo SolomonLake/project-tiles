@@ -1,26 +1,44 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { Grid, Button, Divider, Link, Container } from "@material-ui/core";
 import "./App.css";
 import { AppProps } from "./App";
 import { Tile } from "./Tile/Tile";
 
-const useStyles = makeStyles(theme => ({
-  root: {},
-  gridRow: {
-    // overflow: "hidden",
-  },
-  gridItem: {
-    display: "flex",
-  },
-}));
+const useStyles = makeStyles(theme =>
+  createStyles({
+    rootContainer: {
+      height: "100vh",
+    },
+    gridY: {
+      height: "100%",
+      alignItems: "center",
+      flexWrap: "nowrap",
+    },
+    gridX: {
+      maxHeight: "100%",
+      overflow: "auto",
+      flexWrap: "nowrap",
+    },
+    gridItem: {
+      display: "flex",
+      height: "100%",
+    },
+  }),
+);
 
 export const AppUI: React.FC<AppProps> = props => {
   const classes = useStyles();
 
   return (
-    <Container>
-      <Grid container direction="column" justify="center" spacing={2} xs>
+    <Container maxWidth="lg" className={classes.rootContainer}>
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        spacing={2}
+        className={classes.gridY}
+      >
         {props.game.tileY.map((row, rowIndex) => {
           return (
             <Grid
@@ -29,19 +47,13 @@ export const AppUI: React.FC<AppProps> = props => {
               direction="row"
               key={rowIndex}
               justify="center"
-              spacing={2}
-              className={classes.gridRow}
-              xs
+              // spacing={2}
+              className={classes.gridX}
+              // xs
             >
               {row.map(tileId => {
                 return (
-                  <Grid
-                    item
-                    key={tileId}
-                    className={classes.gridItem}
-                    xs
-                    justify="center"
-                  >
+                  <Grid item key={tileId} className={classes.gridItem}>
                     <Tile tile={props.game.tiles[tileId]} />
                   </Grid>
                 );

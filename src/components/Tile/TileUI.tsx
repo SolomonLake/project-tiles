@@ -5,9 +5,11 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   tileImage: {
-    display: "flex",
-    maxWidth: "100%",
-    maxHeight: "100%",
+    // display: "flex",
+    // maxWidth: "100%",
+    // maxHeight: "100%",
+    width: "100%",
+    objectFit: "contain",
   },
 }));
 
