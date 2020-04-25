@@ -21,6 +21,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
-        git config --global user.email lakegh@gmail.com
-        git config --global user.name solomonlake
         CI=false npm run deploy
