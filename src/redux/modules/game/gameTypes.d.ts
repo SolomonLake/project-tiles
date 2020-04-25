@@ -1,6 +1,10 @@
-export type TileType = {
-  id: string;
+export type TileConfig = {
   image: string;
+  type: string;
+};
+
+export type TileType = TileConfig & {
+  id: string;
   facingUp: boolean;
 };
 
@@ -24,8 +28,9 @@ export type GameOverPhase = {
 
 export type GamePhaseType = "matching" | "replacing" | "gameOver";
 
+export type TilesMap = { [id: string]: TileType };
 export type GameState = {
   phase: MatchingPhase | ReplacingPhase | GameOverPhase;
   tileY: TileYArray;
-  tiles: { [id: string]: TileType };
+  tiles: TilesMap;
 };
