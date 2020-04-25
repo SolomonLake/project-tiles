@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme =>
     rootContainer: (props: StyleTypes) => ({
       height: "100vh",
       width: `${props.xyRatio}vh`,
+      maxWidth: "100%",
       paddingBottom: "50px",
     }),
     gridY: {

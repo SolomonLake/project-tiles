@@ -5,8 +5,8 @@ import pathIcon from "../../../images/strategygameicons/SGI_86.png";
 
 function getLevelConfig() {
   return {
-    xCount: 4,
-    yCount: 6,
+    xCount: 3,
+    yCount: 4,
     tileImages: [
       ...arrayOfAnyNumber(gemIcon, 12),
       ...arrayOfAnyNumber(pathIcon, 12),
