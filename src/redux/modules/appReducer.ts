@@ -1,4 +1,4 @@
-import { localStorageService } from "../../scripts/localStorageService";
+import { localStorageService } from "../../shared/localStorageService";
 import { PaletteType } from "@material-ui/core";
 
 type AppView = "matching" | "replacing" | "gameOver";
