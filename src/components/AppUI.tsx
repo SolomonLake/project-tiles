@@ -5,12 +5,16 @@ import "./App.css";
 import { AppProps } from "./App";
 import { Tile } from "./Tile/Tile";
 
+type StyleTypes = {
+  xyRatio: number;
+};
 const useStyles = makeStyles(theme =>
   createStyles({
-    rootContainer: {
+    rootContainer: (props: StyleTypes) => ({
       height: "100vh",
+      width: `${props.xyRatio}vh`,
       paddingBottom: "50px",
-    },
+    }),
     gridY: {
       height: "100%",
       display: "flex",
@@ -36,7 +40,9 @@ const useStyles = makeStyles(theme =>
 );
 
 export const AppUI: React.FC<AppProps> = props => {
-  const classes = useStyles();
+  const classes = useStyles({
+    xyRatio: (props.game.tileY[0].length / props.game.tileY.length) * 100,
+  });
 
   return (
     <Container maxWidth="lg" className={classes.rootContainer}>
@@ -46,7 +52,7 @@ export const AppUI: React.FC<AppProps> = props => {
             <div className={classes.gridX}>
               {row.map(tileId => {
                 return (
-                  <div className={classes.gridItem}>
+                  <div className={classes.gridItem} key={tileId}>
                     <Tile tile={props.game.tiles[tileId]} />
                   </div>
                 );

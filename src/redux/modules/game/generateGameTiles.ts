@@ -6,10 +6,10 @@ import pathIcon from "../../../images/strategygameicons/SGI_86.png";
 function getLevelConfig() {
   return {
     xCount: 4,
-    yCount: 5,
+    yCount: 6,
     tileImages: [
-      ...Array.from(Array(10), () => gemIcon),
-      ...Array.from(Array(10), () => pathIcon),
+      ...arrayOfAnyNumber(gemIcon, 12),
+      ...arrayOfAnyNumber(pathIcon, 12),
     ],
   };
 }
@@ -43,4 +43,8 @@ export function generateGameTiles(): {
     tileY,
     tiles,
   };
+}
+
+function arrayOfAnyNumber<T>(value: T, n: number) {
+  return Array.from(Array(n), () => value);
 }
