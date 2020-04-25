@@ -18,6 +18,8 @@ jobs:
     - name: Install Packages
       run: npm install
     - name: Deploy to GH Pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
         git config --global user.email lakegh@gmail.com
         git config --global user.name solomonlake
