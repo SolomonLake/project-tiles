@@ -18,7 +18,7 @@ export function generateGameTiles(): {
   tileY: TileYArray;
   tiles: { [id: string]: TileType };
 } {
-  let levelConfig = getLevelConfig();
+  const levelConfig = getLevelConfig();
   let tiles = {};
   const tileY = Array.from(Array(levelConfig.yCount)).map((_, yIndex) => {
     return Array.from(Array(levelConfig.xCount)).map((__, xIndex) => {

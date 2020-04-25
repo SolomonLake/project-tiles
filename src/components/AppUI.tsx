@@ -50,7 +50,7 @@ export const AppUI: React.FC<AppProps> = props => {
       <div className={classes.gridY}>
         {props.game.tileY.map((row, rowIndex) => {
           return (
-            <div className={classes.gridX}>
+            <div className={classes.gridX} key={rowIndex}>
               {row.map(tileId => {
                 return (
                   <div className={classes.gridItem} key={tileId}>
