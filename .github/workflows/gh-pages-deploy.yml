@@ -18,4 +18,7 @@ jobs:
     - name: Install Packages
       run: npm install
     - name: Deploy to GH Pages
-      run: CI=false npm run deploy
+      run: | 
+        git config --global user.email lakegh@gmail.com
+        git config --global user.name solomonlake
+        CI=false npm run deploy
