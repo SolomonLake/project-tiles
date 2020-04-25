@@ -50,6 +50,8 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0"
   }
 }
